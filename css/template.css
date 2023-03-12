@@ -1,0 +1,432 @@
+* {
+  box-sizing: border-box;
+}
+
+/*-----------------------------------------------Navigation Bars------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+#navbar {
+  overflow: hidden;
+  background: linear-gradient(#0f2027, #2c5364 25%, #203a43, #0f2027);
+  box-shadow: 0px 2px 5px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Navigation bar links*/
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.5vw 1vw;
+  margin: 0px;
+  text-decoration: none;
+  font-size: 1.5vw;
+}
+
+#loginbar {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(#0f2027, #2c5364 25%, #203a43, #0f2027);
+  box-shadow: 0px 2px 5px;
+  width: 100%;
+  color: #f2f2f2;
+  padding: 7px;
+  display: none;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.content {
+  padding-top: 80px;
+}
+
+#admin {
+  display: block;
+  float: right;
+  cursor: pointer;
+}
+
+/*----------------------------------------------------Main Content----------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+body {
+  font-family: 'Roboto', Open Arial, Helvetica, sans-serif;
+  color: #2c5364;
+  padding: 0px;
+  margin: 0;
+}
+
+/* Header contains title, main page photo and the page intro paragraph */
+header {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.pageTitle {
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #30e8bf, #ff8235, #30e8bf) 1;
+  text-align: center;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 0px;
+  padding: 10px;
+  font-size: 3.5vw;
+  letter-spacing: 1.5vw;
+}
+
+.pageIntro {
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(#30e8bf, #ff8235) 1;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 0px;
+  padding: 10px;
+  font-size: 24px;
+  align-content: center;
+}
+
+#pageSubtitle {
+  text-align: center;
+  font-size: 28px;
+  background-image: repeating-linear-gradient(to right, #30e8bf, #ff8235);
+  background-size: 30% 100%;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  padding: 0px;
+  margin: 0px;
+  -webkit-background-clip: text;
+}
+
+/*----------------------------------------------Border Spacing Elements-----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+.hiddenSpacerBlue,
+.hiddenSpacerOrange {
+  display: none;
+}
+
+.spacer {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+
+.spaceLeft,
+.spaceRight {
+  border-image: repeating-linear-gradient(#ff8235, #30e8bf) 1;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  height: 20px;
+}
+
+.spaceLeft {
+  border-right: 1px solid;
+}
+
+.spaceRight {
+  border-left: 1px solid;
+}
+
+
+
+.standardImg {
+  width: 80%;
+  height: auto;
+}
+
+.climb {
+  width: 50%;
+}
+
+/*----------------------------------------------Structural Elements---------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.leftcolumn {
+  border-right: 1px solid;
+}
+
+.rightcolumn {
+  border-left: 1px solid;
+}
+
+.leftcolumn,
+.rightcolumn {
+  flex: 50%;
+  background: white;
+  padding: 20px;
+  font-size: 18px;
+  border-image: linear-gradient(#ff8235, #30e8bf, #ff8235) 1;
+}
+
+.borderlessColumn {
+  border: 0px;
+}
+
+footer {
+  background-color: #2c5364;
+  height: 300px;
+  border-top: 4px solid #ff8235;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 30px;
+}
+
+footer a {
+  flex: 30%;
+  color: white;
+  margin: 5px;
+  /* width: 30%; */
+  font-size: 2.5vw;
+  text-decoration: none;
+}
+
+.certs {
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  height: 320px;
+}
+
+.node text {
+  font-size: 12px;
+  font-family: Times New Roman;
+  stroke: none;
+  fill: #16E8FB;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .4;
+}
+
+.examples {
+
+  flex: 50%;
+}
+
+.eximg {
+  width: 50%;
+}
+
+/*--------------------------------------------------Image Viewer------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+.imgcontainer {
+  display: block;
+  width: 20%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0px auto;
+  text-align: center;
+
+  background-origin: border-box;
+
+  background-image: linear-gradient(#30e8bf, #ff8235);
+  border: 4px solid transparent;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+.imgcontainerimg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.imgcontainerimg:hover {
+  opacity: 0.7;
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/*Image viewer dark background */
+.image_viewer {
+  /* Hide */
+  display: none;
+  position: fixed;
+
+  /* Position over other elements with z-index*/
+  z-index: 1;
+  padding-top: 100px;
+
+  /* position element to start from top corner */
+  left: 0;
+  top: 0;
+
+  /* set to cover whole screen */
+  width: 100%;
+  height: 100%;
+
+  /* Allow scrolling */
+  overflow: auto;
+
+  /* Set some transparency with rgba */
+  background-color: rgba(15, 32, 39, 0.9);
+}
+
+/* Image viewer content image/PDF */
+.viewer-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  height: auto
+}
+
+/* Image viewer caption*/
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 100%px;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add oversize then snap back animation */
+.viewer-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 1s;
+}
+
+@keyframes zoom {
+
+  0% {
+    transform: scale(0)
+  }
+
+  80% {
+    transform: scale(1.2)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+/* Cross to close image viewer */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*----------------------------------------------------Media Rule------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+/* Media rule */
+@media (max-width: 600px) {
+
+  #loginbar {
+    top: 22px;
+  }
+
+  .loginInputs {
+    display: block;
+  }
+
+  /* Make columns stack */
+  .row {
+    flex-direction: column;
+    clear: both;
+  }
+
+  /* When columns stack make border appear on all sides */
+  /* Set margins so border is not right at the screen edge */
+  .rightcolumn,
+  .leftcolumn {
+    border: 2px solid;
+    max-width: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  /* Set opposite gradients for left and right columns */
+  .rightcolumn {
+    border-image: linear-gradient(#30e8bf, #ff8235) 1;
+  }
+
+  .leftcolumn {
+    border-image: linear-gradient(#ff8235, #30e8bf) 1;
+  }
+
+  /* Make hidden spacers visible */
+  .hiddenSpacerBlue {
+    display: block;
+    border-image: none;
+    border-color: #30e8bf;
+  }
+
+  .hiddenSpacerOrange {
+    display: block;
+    border-image: none;
+    border-color: #ff8235;
+  }
+
+  .statement {
+    font-size: 16px;
+  }
+
+  .viewer-content {
+    width: 100%;
+  }
+
+  #navbar a {
+    font-size: 3.5vw;
+  }
+
+  footer a {
+    font-size: 6vw;
+  }
+
+
+
+}
