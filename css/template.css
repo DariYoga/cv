@@ -76,6 +76,7 @@ header {
   border-width: 4px;
   border-style: solid;
   border-image: linear-gradient(to right, #30e8bf, #ff8235, #30e8bf) 1;
+
   text-align: center;
   width: 75%;
   margin: auto;
